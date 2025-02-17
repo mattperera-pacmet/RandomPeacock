@@ -28,3 +28,6 @@ Thumbs.db
 .cargo/
 rustfmt.toml
 clippy.toml
+
+# Ignore the output of the `cargo` command
+colors.json
