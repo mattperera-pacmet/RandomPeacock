@@ -1,0 +1,30 @@
+# Compiled binary
+/target/
+
+# Rust package manager files
+**/Cargo.lock
+**/target/
+**/*.rs.bk
+
+# Build artifacts
+**/*.rlib
+**/*.rmeta
+
+# Output logs and debug files
+*.log
+*.out
+*.err
+
+# IDE and editor files
+.vscode/
+.idea/
+*.iml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Rustup, Cargo, and debugging
+.cargo/
+rustfmt.toml
+clippy.toml
