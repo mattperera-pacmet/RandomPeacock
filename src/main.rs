@@ -1,3 +1,4 @@
+use clipboard::{ClipboardContext, ClipboardProvider};
 use rand::Rng;
 use serde::{Deserialize, Serialize};
 use std::fs::{File, OpenOptions};
@@ -49,6 +50,10 @@ fn main() {
     print!("New random color: {} ", new_color);
     color_data.colors.push(new_color.clone());
     save_colors_to_file(filename, &color_data);
+
+    // Copy the new color to the clipboard
+    let mut ctx: ClipboardContext = ClipboardProvider::new().unwrap();
+    ctx.set_contents(new_color.clone()).unwrap();
 
     // Display the color in a big box
     let color_code = &new_color[1..]; // Remove the '#' character
